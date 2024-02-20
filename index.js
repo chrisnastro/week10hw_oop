@@ -62,8 +62,7 @@ inquirer
                 text-anchor="${this._attributes['text-anchor']}"
                 fill="${this._attributes.fill}" font-size="${fontSize}">
                 ${this._text}
-                </text>
-                `;
+                </text>`;
             },
         };
 
@@ -80,11 +79,25 @@ inquirer
                 shape = new Triangle(width / 2, height / 2, triSize);
                 fontSize = 52;
                 break;
-            case 'Square';
-            const sqSize = Math.min(width, height) * 0.8,
+            case 'Square':
+            const sqSize = Math.min(width, height) * 0.8;
             shape = new Square(width / 2, height / 2, sqSize);
             text._attributes.y = height / 1.65;
             fontSize = 62;
             break;
         }
+
+        const svgData = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
+        ${shape.render(answers.shapeColor)}
+        ${text.render()}
+        </svg>`;
+
+        fs.writeFileSync(`${__dirname}/logo.svg`, svgData.toString());
+
+        console.log('Congrats! Generated logo.svg!');
+    
     })
+    .catch((error) => {
+        console.error(error);
+    });
