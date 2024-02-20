@@ -31,4 +31,9 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## Mock-Up
 
-<img  src=images/example.png>
+<img src=images/example.png>
+
+## Credits
+
+```md
+Includes various code from: https://github.com/L10N37

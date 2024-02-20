@@ -93,7 +93,7 @@ inquirer
         ${text.render()}
         </svg>`;
 
-        fs.writeFileSync(`${__dirname}/logo.svg`, svgData.toString());
+        fs.writeFileSync(`${__dirname}/Assets/logo.svg`, svgData.toString());
 
         console.log('Congrats! Generated logo.svg!');
 
