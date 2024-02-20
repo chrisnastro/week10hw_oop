@@ -21,7 +21,7 @@ inquirer
             name: 'textColor',
             message: 'Choose a color for your text (hexidecimal or by color name:',
             validate: (input) => {
-                const checkColorName = colorList.includes(input.toLowerCase()),
+                const checkColorName = colorList.includes(input.toLowerCase());
                 const checkHexCode = /^#[0-9A-F]{6}$/i.test(input);
                 return checkColorName || checkHexCode;
             },
@@ -37,7 +37,7 @@ inquirer
             name: 'shapeColor',
             message: "Choose your shape color (hexidecimal or by color name):",
             validate: (input) => {
-                const checkColorName = colorList.includes(input.toLowerCase()),
+                const checkColorName = colorList.includes(input.toLowerCase());
                 const checkHexCode = /^#[0-9A-F]{6}$/i.test(input);
                 return checkColorName || checkHexCode;
             },
@@ -80,11 +80,11 @@ inquirer
                 fontSize = 52;
                 break;
             case 'Square':
-            const sqSize = Math.min(width, height) * 0.8;
-            shape = new Square(width / 2, height / 2, sqSize);
-            text._attributes.y = height / 1.65;
-            fontSize = 62;
-            break;
+                const sqSize = Math.min(width, height) * 0.8;
+                shape = new Square(width / 2, height / 2, sqSize);
+                text._attributes.y = height / 1.65;
+                fontSize = 62;
+                break;
         }
 
         const svgData = `
@@ -96,7 +96,7 @@ inquirer
         fs.writeFileSync(`${__dirname}/logo.svg`, svgData.toString());
 
         console.log('Congrats! Generated logo.svg!');
-    
+
     })
     .catch((error) => {
         console.error(error);
