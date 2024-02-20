@@ -33,6 +33,8 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 <img src=images/example.png>
 
+Video Demonstration: https://drive.google.com/file/d/1JKfVtBDkH1FpZIJY0iKfZei370JpFPt-/view?usp=drive_link
+
 ## Credits
 
 ```md
