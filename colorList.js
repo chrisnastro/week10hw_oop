@@ -1,6 +1,6 @@
-export { colorsArray };
+export { colorList };
 
-const colorsArray = [
+const colorList = [
     "aliceblue",
     "antiquewhite",
     "aqua",
