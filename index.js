@@ -1,9 +1,9 @@
-import { colorList } from './colorList.js;';
+import { colorList } from './colorList.js';
 import fs from 'fs';
 import path from 'path';
 const __dirname = path.resolve();
 import inquirer from 'inquirer';
-import { Triangle, Circle, Square } from './lib.shapes.js';
+import { Triangle, Circle, Square } from './lib/shapes.js';
 
 const width = 300;
 const height = 200;
